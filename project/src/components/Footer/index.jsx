@@ -1,9 +1,8 @@
-import logo from '../../assets/img/Gymbro_logo.svg';
+import logo from '../../assets/img/GymbroLogo.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faFacebook,
     faLinkedin,
-    faTwitter,
     faInstagram
 } from '@fortawesome/free-brands-svg-icons';
 import './index.scss'

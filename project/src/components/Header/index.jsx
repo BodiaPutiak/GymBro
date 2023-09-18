@@ -4,7 +4,7 @@ import NavBar from './NavBar';
 import { Link, NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faBarsStaggered, faPlus, faBars, faXmark  } from '@fortawesome/free-solid-svg-icons'
-import GymBroLogo from '../../assets/img/Gymbro_logo.svg'
+import GymBroLogo from '../../assets/img/GymbroLogo.svg'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
