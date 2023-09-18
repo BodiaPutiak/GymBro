@@ -1,0 +1,39 @@
+.about-page {
+    top: 50px;
+    margin-bottom: 300px;
+}
+
+.our-history-container {
+    margin: 100px 0;
+    color: #000;
+    padding-inline: 50px;
+    text-align: center;
+    .our-history {
+        display: flex;
+        gap: 100px;
+        .text-container {
+            flex: 1;
+
+            h2 {
+                font-size: 40px;
+            }
+
+            p {
+                font-size: 15px;
+                color: gray
+            }
+        }
+        .img-container {
+            flex: 1;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 1250px) {
+    .about-page{
+        margin-top: 0;
+    }
+}

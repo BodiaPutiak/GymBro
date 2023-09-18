@@ -1,0 +1,131 @@
+@import '../../colors.scss';
+
+header {
+    display: flex;
+    align-items: center;    
+    background: black;
+    height: 80px;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    .logo {
+        margin: 0 30px;
+        display: block;
+
+        img {
+            width: 150px;
+            filter: invert(15%) sepia(91%) saturate(6924%) hue-rotate(343deg) brightness(103%) contrast(113%);
+        }
+    }
+
+    nav {
+        flex: 1;
+        display: flex;
+        width: 100%;      
+        justify-content: center;
+        
+        a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px;
+
+            &:hover {
+                transition: all 0.3s ease-out;
+                color: $primary-color;
+            }
+        }
+    }
+
+    .left-section {
+        width: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .burger-menu {
+            display: none;
+        }
+        a {
+            font-size: 22px;
+            color: #fff;
+            display: block;
+            line-height: 51px;
+            height: 51px;
+            position: relative;
+            text-decoration: none;
+
+            
+            &:hover svg {
+                transition: all 0.3s ease-out;
+                color: $primary-color;
+            }
+        }
+
+        .join-class {
+            border: solid 2px #4d4d4e;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+
+            &:hover svg{
+                color: unset;
+            }
+
+            .rectangle {
+                height: 40px;
+                width: 40px;
+                display: block;
+                background: $primary-color;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: 10px;
+                border-radius: 5px;
+                
+
+                &:hover {
+                    transform: rotate(360deg);
+                    transition: transform 1s ease-in;
+                }
+            }
+
+            .join-now-text {
+                font-size: 18px;
+                font-weight: bold;
+                margin: 0 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1235px) {
+    .nav-bar {
+        display: none;
+    }
+
+    .left-section {
+        position: absolute;
+        right: 0;
+
+        .burger-menu {
+            display: block !important;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .left-section {
+        all: unset;
+        width: 10%;
+        .join-class {
+            display: none !important;
+        }
+    }
+   
+}
+
+

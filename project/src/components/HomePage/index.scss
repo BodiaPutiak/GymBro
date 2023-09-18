@@ -1,0 +1,976 @@
+@import '../../_colors.scss';
+
+.hero {
+    margin-top: 50px;
+    background-image: url("../../assets/img/main-background-img.jpg");
+    background-size: cover;
+    background-position: 40%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+
+    .hero-text {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        position: absolute;
+        top: 30%;
+        right: 15%;
+        z-index: 2;
+        
+        .hero-stroke {
+            left: 30px;
+            p {
+                color: #000;
+                font-weight: lighter;
+                font-size: 20px;
+            }
+
+            img {
+                width: 250px;
+                filter: brightness(0) invert(1);;
+            }
+        }
+        h1 {
+            margin: 10px;
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        h3 {
+            font-weight: lighter;
+            font-size: 45px;
+            margin: 5px;
+        }
+
+        .hero-btn {
+            margin-top: 50px;
+            background: #fff;
+            color: #000;
+
+            transition: all 0.3s;
+            
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: -15px; /* Match the vertical offset */
+                    right: -10px; /* Match the horizontal offset */
+                    bottom: 10px; /* Reset the bottom */
+                    left: 10px; /* Reset the left */
+                    border: 1px solid #fff; /* Border color matches button color */
+                    opacity: 1; /* Initially visible */
+                    transform: translateY(0) translateZ(0); /* Start behind and at the same z-index */
+                    transition: transform 0.3s, opacity 0.3s;
+                    z-index: -1; /* Behind the button */
+                }
+        
+            
+            &:hover {
+                background: #fff;
+
+            }
+        }
+
+    }
+    .share-tag {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        right: 6%;
+        top: 50%;
+        transform: translateY(-50%);
+        p {
+            transform: rotate(90deg);
+            transform-origin: center;
+            font-size: 17px;
+            font-weight: bold;
+        }
+
+        span {
+            height: 40px;
+            width: 2px;
+            background: $primary-color;
+            transform: rotate(180deg);
+            transform-origin: center;
+            margin: 20px 0;
+        }
+
+        svg {
+            height: 20px;
+            margin-bottom: 10px;
+            transition: all 0.3s;
+            cursor: pointer;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+.info-about-us {
+    box-sizing: border-box;
+    padding: 0 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 100px;
+        position: absolute;
+        top: -50px;
+            
+        .grid-element {
+            padding-inline: 20px;
+            overflow: auto;
+            color: black;
+            max-width: 350px;
+            min-height: 350px;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 10px 20px 60px rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.2s;
+
+            h1 {
+                font-size: 30px;
+            }
+            p {
+                font-size: 15px;
+            }
+            .bg {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                z-index: -1;
+                filter: brightness(0.5);
+                opacity: 0;
+                transition: all 0.2s;
+            }
+            &:hover {
+                color: #fff;
+                .bg {
+                    opacity: 1;
+                }
+                
+            }
+        }
+    }
+}
+
+.girl-sub-section {
+    padding-inline: 100px;
+    position: relative;
+    top: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .about-us {
+        position: relative;
+
+        .about-us-stroke {
+            p {
+                color: #fff;
+                font-size: 20px;
+            }
+        }
+
+        h1 {
+            color: #000;
+            font-size: 30px;
+        }
+
+        p {
+            color:#000;
+            font-size: 15px;
+        }
+
+        .our-benefits {
+            display: flex;
+            column-gap: 10px;
+            align-items: center;
+            justify-content: center;
+
+            
+            .benefit {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 30px 0;
+
+                &:nth-child(1) {
+                    padding-right: 30px;
+                }
+
+                &:nth-child(2) {
+                    border-inline: gray solid 1px;
+                    padding-inline: 40px;
+                }
+
+                &:nth-child(3) {
+                    padding-left: 30px;
+                }
+
+                img {
+                    width: 5.4rem;
+                }
+
+                p {
+                    font-size: 20px;
+                    font-weight: bold;
+                    flex-wrap: nowrap;
+                }
+            }
+        }
+        
+    }
+
+    .girl-img-container {
+        position: relative;
+        height: fit-content;
+        .girl {
+            position: absolute;
+            z-index: 1;
+            right: 0;
+            width: 80%;
+        }
+
+        .girl-bg {
+            position: absolute;
+            z-index: 0;
+            right: 0;
+            width: 40%;
+        }
+
+        .girl-bg-text {
+            position: absolute;
+            left: 100px;
+            z-index: 0;
+            width: 12%;
+        }
+    }
+}
+
+
+.our-classes-section {
+    position: relative;
+    top: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .our-classes {
+        display: inline-block;
+    }
+    h1 {
+        font-size: 40px;
+        color: #000;
+        text-align: center;
+    }
+    .classes-grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 20px;
+        width: 95%;
+      
+        .classes-element {
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+
+            div {
+                position: absolute;
+                bottom: 53%;
+                transform: rotate(30deg);
+                left: -90px;
+                height: 70px;
+                width: 200px;
+                background: #fff;
+                opacity: 0.3;
+                border-radius: 40px;
+                z-index: 0;
+                transition: all 0.3s;
+            }
+
+            .sport-icon {
+                position: absolute;
+                bottom: 50%;
+                left: 30px;
+                height: 40px;
+            }
+
+            .sport-img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                filter: brightness(0.5);
+                object-fit: cover;
+                transition: all 0.3s;
+                z-index: -1;
+            }
+
+            h3 {
+                position: absolute;
+                font-size: 30px;
+                font-weight: bold;
+                color: #fff;
+                bottom: 40px;
+                left: 15px;
+            }
+
+            p {
+                text-wrap: nowrap;
+                position: absolute;
+                background: $primary-color;
+                padding: 3px;
+                font-size: 20px;
+                color: #fff;
+                bottom: 20px;
+                left: 15px;
+            }
+      
+            &:nth-child(1) {
+                grid-column: span 2; 
+            }
+            &:last-child {
+                grid-column-end: span 2;
+            }
+
+            &:hover {
+                .sport-img {
+                    filter: brightness(1);
+                    transform: scale(1.3);
+                }
+
+                .sport-icon {
+                    filter: invert(31%) sepia(100%) saturate(7483%) hue-rotate(341deg) brightness(97%) contrast(112%);
+                }
+
+                div {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.video-trainers-section {
+    position: relative;
+    top: 800px;
+   
+
+   .video-header-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: $primary-color;
+        padding: 50px;
+
+        h2 {
+            color: #fff;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .video-cont-btn {
+            background-color: #fff;
+            color:#000;
+
+            &::after {
+                position: absolute;
+                border: 1px solid #fff;
+                z-index: 1;
+            }
+
+            &:hover::after {
+                transform: translateY(13px) translateX(-10px); /* Slide in with a 3D effect */
+                opacity: 0; /* Disappear on hover */
+            }
+                            
+            &:hover {
+                background: #fff;
+                box-shadow: 0 0;
+            }
+        }
+    }
+
+    .video-bg {
+        background: rgb(41, 39, 39);
+        position: relative;
+        height: 800px;
+        left: 0;
+        right: 0;
+        display: flex;
+        gap: 200px;
+        align-items: center;
+        padding: 50px;
+
+        .video-container {
+            max-width: 700px;
+            .video {
+                width: 100%;
+            }
+        }
+
+        .description-container {
+            position: relative;
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            .why-us {
+                margin-top: 0;
+                position: relative;
+                top: -10px;
+                left: 30px;
+                width: 250px;
+                img {
+                    z-index: 0;
+                    width: 100%;
+                }
+                p {
+                    position: absolute;
+                    z-index: 1;
+                }
+            }
+    
+            h3 {
+                font-size: 40px;
+            }
+    
+            .reasons-container {
+                max-width: 700px;
+                .reasons {
+                    font-size: 15px;
+                }
+            }
+            .icon-description-container {
+                align-self: center;
+                margin-top: 100px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 50px;
+    
+                .icon-description {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+    
+                    img {
+                        max-height: 50px;
+                        background: rgb(89, 89, 89);
+                        padding: 10px;
+                        border-radius: 50%;
+                    }
+                    p {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    .trainers-container {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #000;
+        text-align: center;
+    
+        h3 {
+            font-size: 40px;
+        }
+    
+        p {
+            margin: 0;
+            font-size: 15px;
+        }
+    
+        .trainers-grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 25px;
+    
+            .trainer-card {
+                margin-top: 100px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                box-shadow: 0px 15px 10px rgba(0, 0, 0, 0.3);
+                height: 500px;
+                width: 400px;
+                overflow: hidden;
+                cursor: pointer;    
+    
+                .trainer-img-container {
+                    width: 320px;
+                    height: 300px;
+                    display: flex;
+                    justify-content: center;
+                    overflow: hidden;
+                    position: relative;
+    
+                    .bg-stroke {
+                        position: absolute;
+                        width: 110%;
+                    }
+                    .trainer-img {
+                        position: absolute;
+                        width: 80%;
+                        filter: brightness(0.5);
+                        transition: all 0.5s;
+                    }
+    
+                    svg {
+                        height: 15px;
+                        position: absolute;
+                        bottom: -50px;
+                        padding: 20px 40px 50px;
+                        background: #fff;
+                        border-radius: 50%;
+                    }
+    
+                    &:hover {
+                        .trainer-img {
+                            filter: brightness(1);
+                        }
+                    }
+                }
+    
+                h4 {
+                    color:#000;
+                    font-size: 25px;
+                }
+    
+                .socials-container {
+                    margin-top: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    column-gap: 10px;
+    
+                    svg {
+                        height: 20px;
+                    }
+                }
+
+                .under-line {
+                    background-color: $primary-color;
+                    height: 5px;
+                    position: relative;
+                    bottom: -40px;
+                    width: 20%;
+                    transition: all 0.5s;
+                }
+
+                &:hover {
+                    .under-line {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }    
+}
+
+.testemonials-bmicalc-section {
+    position: relative;
+    top: 850px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+    .testemonials-container {
+        width: 70%;
+        min-height: 300px;
+        margin: 100px 0;
+        background: #000;
+        padding: 100px;
+        position: relative;
+        .quotes {
+            position: absolute;
+            top: 50px;
+            left: 55px;
+            height: 50px;
+        }
+
+        p {
+            font-size: 15px;
+            margin: 0;
+        }
+
+        h5 {
+            font-size: 20px;
+        }
+
+        h6 {
+            font-size: 15px;
+
+        }
+
+        .button-container {
+            position: absolute;
+            bottom: 20px;
+            right: 100px;
+            display: flex;
+            gap: 20px;
+
+            button {
+                background: #fff;
+                border: none;
+                padding: 15px;
+                cursor: pointer;
+                transition: all 0.3s;
+
+                &:hover {
+                    background: $primary-color;
+
+                    svg {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    
+    .bmi-calculator-container {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        background: rgb(41, 39, 39);
+        .bmi-calculator {
+            display: flex;
+            flex-direction: column;
+            padding: 50px 100px;
+    
+            h3 {
+                font-size: 40px;
+                margin: 15px 0;
+                span {
+                    color: $primary-color;
+                }
+            }
+            p {
+                margin: 5px;
+                font-size: 15px;
+            }
+    
+           .bmi-input-container {
+                display: flex;
+                gap: 50px;
+                margin-top: 30px;
+    
+                input {
+                    all: unset;
+                    padding: 20px 10px;
+                    width: 150px;
+                    font-size: 15px;
+                    border: #fff solid 1px;
+                    background: transparent;
+                }
+                h5 {
+                    font-size: 15px;
+
+                    span {
+                        color: $primary-color;
+                    }
+                }
+            }
+    
+            button {
+                all: unset;
+                margin-top: 30px;
+                text-align: center;
+                width: 170px;
+                padding: 10px 20px;
+                font-size: 20px;
+                font-weight: bold;
+                background: rgb(89, 89, 89);
+                transition: all 0.3s;
+                cursor: pointer;
+    
+                &:hover {
+                    background: $primary-color;
+                }
+            }
+        }
+    
+
+        .img-container {
+            position: relative;
+            display: flex;
+            
+            img {
+                width: 100%;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(to left,transparent, rgb(41, 39, 39));
+                z-index: 1; /* Ensure the gradient is below the image */
+            }
+        }
+    }
+}
+
+.pricing-section {
+    position: relative;
+    top: 950px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #000;
+    margin-bottom: 1000px;
+
+    .no-days-off {
+        position: absolute;
+        left: 0;
+        z-index: -1;
+    }
+
+    h2 {
+        font-size: 40px;
+        margin-bottom: 5px;
+    }
+    
+    p {
+        font-size: 15px;
+    }
+
+    .price-grid-container {
+        
+        margin-top: 50px;
+        gap: 50px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        .price-item {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 20px;
+            width: 400px;
+            height: 700px;
+            box-shadow: 0 15px 10px rgba(0, 0, 0, 0.3);
+
+            .img-container {
+                width: 300px;
+                height: 300px;
+                overflow: hidden;
+
+                img {
+                    height: 100%;
+                }
+            }
+
+            .price-description-container {
+                background: #fff;
+                position: absolute;
+                top: 240px;
+                z-index: 0;
+                h3 {
+                    font-size: 25px;
+                }
+
+                h4 {
+                    font-size: 40px;
+                    margin-bottom: 5px;
+
+                    span {
+                        font-size: 30px;
+                        font-weight: lighter;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1250px) {
+    .info-about-us {
+        .grid-container {
+            grid-template-columns: 1fr 1fr;
+            justify-items: center;
+            .grid-element:nth-child(3) {
+                grid-column: span 2; 
+                text-align: center; 
+            }
+        }
+    }
+
+    .girl-sub-section {
+        margin-top: 500px;
+        display: flex;
+        align-items: center;
+        .about-us {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .girl-img-container {
+            display: none;
+        }
+    }
+
+    .our-classes-section {
+        .classes-grid-container {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .video-trainers-section {
+        .video-bg {
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+            padding-inline: 20px;
+            padding-bottom: 350px;
+            .description-container {
+                align-items: center;
+                text-align: center;
+                .icon-description-container {
+                    gap: 25px;
+                    .icon-description {
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+        .trainers-container {
+            .trainers-grid-container {
+                grid-template-columns: 1fr 1fr;
+                justify-items: center;
+
+                .trainer-card:nth-child(3) {
+                    grid-column: span 2;
+                    place-items: center;
+                }
+            }
+        }
+    }
+
+    .pricing-section {
+        .price-grid-container {
+            grid-template-columns: 1fr ;
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .testemonials-bmicalc-section {
+        .bmi-calculator-container {
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+            .bmi-calculator {
+                align-items: center;
+                .bmi-input-container {
+                    flex-direction: column;
+                }
+            }
+            .img-container {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 890px) {
+    .info-about-us {
+        .grid-container {
+            grid-template-columns: 1fr;
+            justify-items: center;
+            .grid-element {
+                margin-inline: 25px;
+            }
+            .grid-element:nth-child(3) {
+                grid-column: span 1;
+            }
+        }
+    } 
+
+    .girl-sub-section {
+        margin-top: 900px;
+        padding-inline: 50px;
+        .about-us {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .video-trainers-section {
+        .trainers-container {
+            .trainers-grid-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .trainer-card {
+                    margin-top: 50px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .girl-sub-section {
+        .about-us {
+            .our-benefits {
+                flex-direction: column;
+                align-items: center;
+                .benefit {
+                    &:nth-child(1) {
+                        padding-inline: 30px;
+                    }
+
+                    &:nth-child(2) {
+                        border-inline: none;
+                        border-top: solid gray 1px;
+                        border-bottom: solid gray 1px;
+                        padding-inline: 40px;
+                    }
+
+                    &:nth-child(3) {
+                        padding-inline: 30px;
+                    }
+                }
+            }
+        }
+    }
+    
+    .our-classes-section {
+        .classes-grid-container {
+            grid-template-columns: 1fr;
+
+            .classes-element {
+                &:nth-child(1) {
+                    grid-column: span 1; 
+                }
+                &:last-child {
+                    grid-column-end: span 1;
+                }    
+            }
+        }
+    }    
+}
