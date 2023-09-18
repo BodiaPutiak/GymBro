@@ -6,7 +6,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faBarsStaggered, faPlus, faBars, faXmark  } from '@fortawesome/free-solid-svg-icons'
 import GymBroLogo from '../../assets/img/GymbroLogo.svg'
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 
 function Header(){
@@ -14,9 +13,7 @@ function Header(){
     const [open, setOpen] = useState(false);
 
     const navigate = useNavigate()
-    const handleJoin = () => {
-        navigate('/classes');
-    }
+    
 
     const renderMobiileNavBar = () => {
         if (open) {
