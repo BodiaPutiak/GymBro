@@ -12,9 +12,6 @@ function Header(){
 
     const [open, setOpen] = useState(false);
 
-    const navigate = useNavigate()
-    
-
     const renderMobiileNavBar = () => {
         if (open) {
             return(
