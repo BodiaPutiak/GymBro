@@ -26,20 +26,21 @@ function Blog() {
                 </section>
                 <section className="side-section">
                     <form action="">
-                        <input type="text" placeholder='Search...'/>
-                        <button type='submit'>
-                            <FontAwesomeIcon icon={faSearch} color='#fff' />
-                        </button>
+                        <div className="input-cont">
+                            <input type="text" placeholder='Search...'/>  
+                            <button type='submit'>
+                                <FontAwesomeIcon icon={faSearch} color='#fff' />
+                            </button>  
+                        </div>
                     </form>
                     <div className="categories-container">
                         <h2 className='underlined-header'>Categories</h2>
                         <ul>
-                            <li><p>Body Building</p> <span>(4)</span></li>
-                            <li><p>Boxing</p> <span>(4)</span></li>
-                            <li><p>Crossfit</p> <span>(4)</span></li>
-                            <li><p>Fintess</p> <span>(4)</span></li>
-                            <li><p>Cardio</p> <span>(4)</span></li>
-                            <li><p>Yoga</p> <span>(4)</span></li>
+                            {blogPosts.map((post) => {
+                                return (
+                                    <li><p>{post.sport}</p> <span>(4)</span></li>
+                                )
+                            })}
                         </ul>
                     </div>
                     <div className="recent-posts">

@@ -26,33 +26,35 @@
     .side-section {
         flex: 0.7;
         form {
-            position: relative;
-            input {
-                all: unset;
+            .input-cont {
                 position: relative;
-                right: 0;
-                width: 300px;
-                padding: 20px 10px;
-                font-size: 15px;
-                border: solid 2px $light-gray;
-                border-radius: 10px;
-            }
-
-            button {
-                position: absolute;
-                padding-inline: 20px;
-                top: 0;
-                bottom: 0;
-                right: 0;
-                background: $primary-color;
-                border: none;
-                border-bottom-right-radius: 10px;
-                border-top-right-radius: 10px;
-                cursor: pointer;
-                svg {
-                    height: 25px;
+                display: flex;
+                input {
+                    all: unset;
+                    position: relative;
+                    right: 0;
+                    width: 100%;
+                    padding: 20px 10px;
+                    font-size: 15px;
+                    border: solid 2px $light-gray;
+                    border-radius: 10px;
                 }
-            }
+                button {
+                    position: absolute;
+                    padding-inline: 20px;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    background: $primary-color;
+                    border: none;
+                    border-bottom-right-radius: 10px;
+                    border-top-right-radius: 10px;
+                    cursor: pointer;
+                    svg {
+                        height: 25px;
+                    }
+                }
+            }   
         }
 
         .categories-container {
@@ -122,10 +124,23 @@
                         font-size: 13px;
                     }
                     h3 {
+                        cursor: pointer;
                         font-size: 17px;
+                        &:hover {
+                            color: $primary-color;
+                        }
                     }
                 }
             }
+        }
+    }
+}
+
+
+@media (max-width: 1000px) {
+    .blog-page-container {
+        .side-section {
+            display: none;
         }
     }
 }
