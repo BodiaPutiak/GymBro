@@ -9,6 +9,7 @@ import AboutPage from './components/AboutPage';
 import ClassesPage from './components/ClassesPage';
 import Schedule from './components/Schedule';
 import Blog from './components/Blog';
+import SignUp from './components/SignUp'
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -30,6 +31,7 @@ const { pathname } = useLocation();
         <Route path='/classes' element={<ClassesPage />} />
         <Route path='/schedule' element={<Schedule />} />
         <Route path='/blog' element={<Blog />} />
+        <Route path='signUp' element={<SignUp />} />
       </Route>
     </Routes>
   )

@@ -47,7 +47,7 @@ function Header(){
                 <NavLink className='burger-menu' onClick={handleBurgerMenuButton}>
                     <FontAwesomeIcon icon={faBars} color='#fff' />
                 </NavLink>
-                <NavLink>
+                <NavLink to='/signUp'>
                     <FontAwesomeIcon icon={faUser} color='#fff'/>   
                 </NavLink>
                 <NavLink>
