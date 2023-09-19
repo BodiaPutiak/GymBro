@@ -47,20 +47,9 @@
                 h3 {
                     position: relative;
                     font-size: 20px;
-
-                    &::after {
-                        content: '';
-                        background: $primary-color;
-                        width: 60px;
-                        height: 5px;
-                        position: absolute;
-                        left: 0;
-                        bottom: -10px;
-                    }
                 }
 
                 .socials {
-
                     svg {
                         height: 25px;
                         padding: 10px;
@@ -81,7 +70,7 @@
     .contact-form {
         width: 50%;
         padding: 30px;
-        background-color: rgb(212, 212, 212);
+        background-color: $super-light-gray;
         
         h1 {
             text-wrap: nowrap;

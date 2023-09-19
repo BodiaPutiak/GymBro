@@ -22,7 +22,7 @@ function Footer(){
                 <h5>Design by RadiusTheme</h5>
             </div>
             <div className="our-classes">
-                <h5>Our Classes</h5>
+                <h5 className='underlined-header'>Our Classes</h5>
                 <ul>
                     <li>Fitness Classes</li>
                     <li>Aerobic Classes</li>
@@ -32,7 +32,7 @@ function Footer(){
                 </ul>
             </div>
             <div className="working-hours">
-                <h5>Working Hours</h5>
+                <h5 className='underlined-header'>Working Hours</h5>
                 <h6>Monday - Friday:</h6>
                 <p>7:00am - 21:00pm</p>
                 <h6>Saturday:</h6>

@@ -1,0 +1,131 @@
+@import '../../colors.scss';
+
+
+.blog-page-container {
+    display: flex;
+    color: #000;
+    padding: 100px 125px;
+    gap: 100px;
+    .main-section {
+        flex: 1;
+        .blog-post {
+            margin-bottom: 70px;
+            img {
+                width: 100%;
+            }
+            h2 {
+                font-size: 25px;
+            }
+            p {
+                color: $light-gray;
+                font-size: 15px;
+            }
+        }
+        
+    }
+    .side-section {
+        flex: 0.7;
+        form {
+            position: relative;
+            input {
+                all: unset;
+                position: relative;
+                right: 0;
+                width: 300px;
+                padding: 20px 10px;
+                font-size: 15px;
+                border: solid 2px $light-gray;
+                border-radius: 10px;
+            }
+
+            button {
+                position: absolute;
+                padding-inline: 20px;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                background: $primary-color;
+                border: none;
+                border-bottom-right-radius: 10px;
+                border-top-right-radius: 10px;
+                cursor: pointer;
+                svg {
+                    height: 25px;
+                }
+            }
+        }
+
+        .categories-container {
+            color: #000; 
+            margin-top: 100px;  
+            margin-bottom: 100px;
+            padding: 30px;
+            background: $super-light-gray; 
+            h2 {
+                margin-top: 0;
+                font-size: 20px;
+            }
+
+            ul {
+                padding: 0;
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                li {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    border-bottom: solid 1px $light-gray;
+                    justify-content: space-between;
+                    font-size: 17px;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $primary-color;
+                        text-shadow: 0px 0px 1px $primary-color;
+                    }
+                }
+            }
+        }
+
+        .recent-posts {
+            color:#000;
+            background: $super-light-gray;
+            padding: 30px;
+            h2 {
+                font-size: 20px;
+            }
+
+            ul {
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                li {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    overflow: hidden;
+
+                    .img-cont {
+                        width: 100px;
+                        overflow: hidden;
+                        object-fit: cover;
+                        img {
+                            height: 75px;
+                        }
+                    }
+                    
+                    p {
+                        color: $light-gray;
+                        font-size: 13px;
+                    }
+                    h3 {
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+    }
+}

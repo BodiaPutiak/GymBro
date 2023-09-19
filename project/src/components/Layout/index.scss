@@ -85,7 +85,21 @@ html {
                     box-shadow: 0 0;
                 }
             }
-          }
+
+            .underlined-header {
+                position: relative;
+                text-wrap: nowrap;
+                &::after {
+                    content: '';
+                    background: $primary-color;
+                    width: 50px;
+                    height: 5px;
+                    position: absolute;
+                    left: 0;
+                    bottom: -10px;
+                }
+            }
+        }
     }
     
 }

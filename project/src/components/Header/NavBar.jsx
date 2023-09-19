@@ -13,7 +13,7 @@ function NavBar() {
             <NavLink exact='true' activaclassname='active' to='/schedule'>
                 Schedule
             </NavLink>
-            <NavLink exact='true' activaclassname='active' to='#'>
+            <NavLink exact='true' activaclassname='active' to='/blog'>
                 Blog
             </NavLink>
             <NavLink exact='true' activaclassname='active' to='/pricing'>

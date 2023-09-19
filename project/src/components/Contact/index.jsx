@@ -22,23 +22,23 @@ function Contact() {
                     </p>
                     <div className="contact-info-grid">
                         <div className="contact-info">
-                            <h3>Warsaw, Poland</h3>
+                            <h3 className='underlined-header'>Warsaw, Poland</h3>
                             <p>85 Briston Mint Street,</p>
                             <p>London, E1 8LG, USA</p>
                         </div>
                         <div className="contact-info">
-                            <h3>Open Hours</h3>
+                            <h3 className='underlined-header'>Open Hours</h3>
                             <p>Mon to Fri: 7:30 am — 21:00 pm</p>
                             <p>Saturday: 7:30 am — 19:00 pm</p>
                             <p>Sunday: Closed</p>
                         </div>
                         <div className="contact-info">
-                            <h3>Information</h3>
+                            <h3 className='underlined-header'>Information</h3>
                             <p>+48-123-123-0008</p>
                             <p>gymbro@gmail.com</p>
                         </div>
                         <div className="contact-info">
-                            <h3>Follow Us On</h3>
+                            <h3 className='underlined-header'>Follow Us On</h3>
                             <div className="socials">
                                 <FontAwesomeIcon icon={faFacebook} color='#000'/>
                                 <FontAwesomeIcon icon={faInstagram} color='#000'/>
