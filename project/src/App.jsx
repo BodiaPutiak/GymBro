@@ -1,12 +1,13 @@
-import './App.scss'
-import React from 'react'
-import { Route, Routes } from 'react-router-dom'
-import Layout from './components/Layout'
-import Home from './components/HomePage'
-import Contact from './components/Contact'
-import PricingPage from './components/PricingPage'
-import AboutPage from './components/AboutPage'
-import ClassesPage from './components/ClassesPage'
+import './App.scss';
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Layout from './components/Layout';
+import Home from './components/HomePage';
+import Contact from './components/Contact';
+import PricingPage from './components/PricingPage';
+import AboutPage from './components/AboutPage';
+import ClassesPage from './components/ClassesPage';
+import Schedule from './components/Schedule';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -26,6 +27,7 @@ const { pathname } = useLocation();
         <Route path='/pricing' element={<PricingPage />} />
         <Route path='/about' element={<AboutPage />} />
         <Route path='/classes' element={<ClassesPage />} />
+        <Route path='schedule' element={<Schedule />} />
       </Route>
     </Routes>
   )

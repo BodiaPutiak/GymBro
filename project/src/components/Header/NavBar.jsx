@@ -10,7 +10,7 @@ function NavBar() {
             <NavLink exact='true' activaclassname='active' to='/about'>
                 About
             </NavLink>
-            <NavLink exact='true' activaclassname='active' to='#'>
+            <NavLink exact='true' activaclassname='active' to='/schedule'>
                 Schedule
             </NavLink>
             <NavLink exact='true' activaclassname='active' to='#'>

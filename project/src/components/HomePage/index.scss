@@ -213,7 +213,7 @@
                 }
 
                 &:nth-child(2) {
-                    border-inline: gray solid 1px;
+                    border-inline: $light-gray solid 1px;
                     padding-inline: 40px;
                 }
 
@@ -962,8 +962,8 @@
 
                     &:nth-child(2) {
                         border-inline: none;
-                        border-top: solid gray 1px;
-                        border-bottom: solid gray 1px;
+                        border-top: solid $light-gray 1px;
+                        border-bottom: solid $light-gray 1px;
                         padding-inline: 40px;
                     }
 
