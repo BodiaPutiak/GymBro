@@ -1,0 +1,95 @@
+@import '../../colors.scss';
+
+
+.sidebar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    padding: 10px 30px 0px 30px;
+    color: #000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    max-width: 300px;
+    background: #fff;
+    overflow-y: scroll;
+    z-index: 100;
+    left: -120%;
+    transition: left 0.5s ease-in;
+    &.show {
+        left: 0;
+    }
+    .side-logo-container {
+        display: block;
+
+        img {
+            width: 150px;
+            filter: invert(15%) sepia(91%) saturate(6924%) hue-rotate(343deg) brightness(103%) contrast(113%);
+        }
+    }
+
+    .about-us-text-container {
+        h2 {
+            font-size: 30px;
+            font-weight: bold;
+        }
+        p {
+            font-size: 15px;
+            color: $light-gray;
+        }
+    }
+
+    .contact-info-container {
+        h2 {
+            font-size: 25px;
+            font-weight: bold;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            li {
+                font-size: 15px;
+                color: $light-gray;
+                display: flex;
+                gap: 5px;
+                align-items: center;
+
+                svg {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+
+    .follow-us-container {
+        h2 {
+            font-size: 25px;
+            font-weight: bold;
+        }
+        
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 10px;
+            li{
+                svg {
+                    height: 30px;
+                    padding: 10px;
+                    border-radius: 50%;
+                    background: $super-light-gray;
+                    color: $light-gray;
+                    transition: all 0.3s;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: #fff;
+                        background-color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,6 +1,6 @@
 import './index.scss'
-import './NavBar.scss'
 import NavBar from './NavBar';
+import SideBar from './SideBar';
 import { Link, NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faBarsStaggered, faPlus, faBars, faXmark  } from '@fortawesome/free-solid-svg-icons'
@@ -11,24 +11,18 @@ import { useState } from 'react';
 function Header(){
 
     const [open, setOpen] = useState(false);
-
-    const renderMobiileNavBar = () => {
-        if (open) {
-            return(
-                <nav className={`mobile-nav-bar ${open ? 'show' : ''}`}>
-                    <NavLink className='cross' onClick={() => {handleBurgerMenuButton()}}>
-                        <FontAwesomeIcon  icon={faXmark} color='#000' />
-                    </NavLink>
-                    <NavBar close={open}/>
-                </nav>
-            )
-        } else {
-            return (<div className='nav-bar'></div>)
-        }
-    }
+    const [sideBar, setSideBar] = useState(false);
 
     const handleBurgerMenuButton = () => {
         setOpen(!open);
+    }
+
+    const closeMobileNavBar = () => {
+        setOpen(false);
+    };
+    
+    const handleSideBar = () =>{
+        setSideBar(!sideBar);
     }
 
     return(
@@ -40,8 +34,20 @@ function Header(){
             <nav className='nav-bar'>
                 <NavBar />
             </nav>
+
+            <nav className={`sidebar-container ${sideBar ? 'show' : ''}`}>
+                <NavLink className='cross' onClick={handleSideBar}>
+                    <FontAwesomeIcon  icon={faXmark} color='#000' />
+                </NavLink >
+                <SideBar />
+            </nav>
             
-            {renderMobiileNavBar()}
+            <nav className={`mobile-nav-bar ${open ? 'show' : ''}`}>
+                <NavLink className='cross' onClick={() => {handleBurgerMenuButton()}}>
+                    <FontAwesomeIcon  icon={faXmark} color='#000' />
+                </NavLink >
+                <NavBar closeMobileNavBar={closeMobileNavBar}/>
+            </nav>
 
             <div className="left-section">
                 <NavLink className='burger-menu' onClick={handleBurgerMenuButton}>
@@ -50,7 +56,7 @@ function Header(){
                 <NavLink to='/signUp'>
                     <FontAwesomeIcon icon={faUser} color='#fff'/>   
                 </NavLink>
-                <NavLink>
+                <NavLink onClick={handleSideBar}>
                     <FontAwesomeIcon icon={faBarsStaggered} color='#fff'/>
                 </NavLink>
                 <NavLink className='join-class' to='/classes'>

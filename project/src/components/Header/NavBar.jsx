@@ -1,30 +1,47 @@
-import {  NavLink } from 'react-router-dom'
-import './index.scss'
+import {  NavLink } from 'react-router-dom';
 
-function NavBar() {
+function NavBar(props) {
+
+    const linksData = [
+        {
+          name: 'Home',
+          path: '/'
+        },
+        {
+          name: 'About',
+          path: '/about'
+        },
+        {
+          name: 'Schedule',
+          path: '/schedule'
+        },
+        {
+          name: 'Blog',
+          path: '/blog'
+        },
+        {
+          name: 'Pricing',
+          path: '/pricing'
+        },
+        {
+          name: 'Classes',
+          path: '/classes'
+        },
+        {
+          name: 'Contact',
+          path: '/contact'
+        }
+      ];
+      
     return (
         <>
-            <NavLink exact='true' activaclassname='active' to='/'>
-                Home
-            </NavLink>
-            <NavLink exact='true' activaclassname='active' to='/about'>
-                About
-            </NavLink>
-            <NavLink exact='true' activaclassname='active' to='/schedule'>
-                Schedule
-            </NavLink>
-            <NavLink exact='true' activaclassname='active' to='/blog'>
-                Blog
-            </NavLink>
-            <NavLink exact='true' activaclassname='active' to='/pricing'>
-                Pricing
-            </NavLink>
-            <NavLink exact='true' activaclassname='active' to='/classes'>
-                Classes
-            </NavLink>
-            <NavLink exact='true' activaclassname='active' to='/contact'>
-                Contact
-            </NavLink>
+            {linksData.map((item) => {
+                return (
+                    <NavLink onClick={props.closeMobileNavBar}exact='true' activaclassname='active' to={item.path}>
+                        {item.name}
+                    </NavLink>
+                )
+            })} 
         </>
     )
 }
