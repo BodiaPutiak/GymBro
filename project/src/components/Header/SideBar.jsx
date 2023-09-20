@@ -1,5 +1,5 @@
 import './SideBar.scss';
-import gymBroLogo from '../../assets/img/GymBroLogo.svg';
+import GymBroLogo from '../../assets/img/GymBroLogo.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faFacebook,
@@ -17,7 +17,7 @@ function SideBar() {
     return (
         <>
             <div className="side-logo-container">
-                <img src={gymBroLogo} alt="" />
+                <svg src={GymBroLogo} />
             </div>
             <div className="about-us-text-container">
                 <h2>About Us</h2>
