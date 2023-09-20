@@ -1,5 +1,5 @@
 import './SideBar.scss';
-import GymBroLogo from '../../assets/img/GymBroLogo.svg';
+// import GymBroLogo from '../../assets/img/GymBroLogo.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faFacebook,
@@ -16,9 +16,9 @@ import {
 function SideBar() {
     return (
         <>
-            <div className="side-logo-container">
-                <svg src={GymBroLogo} />
-            </div>
+            {/* <div className="side-logo-container">
+                <img src={GymBroLogo} />
+            </div> */}
             <div className="about-us-text-container">
                 <h2>About Us</h2>
                 <p>Find out who we are and what makes us unique. We are a community-driven gym committed to providing personalized fitness experiences for all levels of fitness enthusiasts in a welcoming and supportive environment.</p>
