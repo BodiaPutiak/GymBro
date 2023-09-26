@@ -31,15 +31,15 @@ function Header(){
                 <img src={GymBroLogo} alt="" />
             </Link>
 
-            <nav className='nav-bar'>
-                <NavBar />
-            </nav>
-
             <nav className={`sidebar-container ${sideBar ? 'show' : ''}`}>
                 <NavLink className='cross' onClick={handleSideBar}>
                     <FontAwesomeIcon  icon={faXmark} color='#000' />
                 </NavLink >
                 <SideBar />
+            </nav>
+
+             <nav className='nav-bar'>
+                <NavBar />
             </nav>
             
             <nav className={`mobile-nav-bar ${open ? 'show' : ''}`}>
