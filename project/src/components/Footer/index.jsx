@@ -14,11 +14,9 @@ function Footer(){
                 <img src={logo} alt="" />
                 <p>Take your health and body to the next level with our comprehensive program designed to help you reach your fitness goals.</p>
                 <div className='socials-div'>
-                    <FontAwesomeIcon icon={faFacebook} color='gray'/>
-                    <FontAwesomeIcon icon={faInstagram} color='gray'/>
-                    <FontAwesomeIcon icon={faLinkedin} color='gray'/>
+                    
                 </div>
-                <h5>Privacy Policy | © 2023 Gymate</h5>
+                <h5>Privacy Policy | © 2023 BP Media</h5>
                 <h5>Design by RadiusTheme</h5>
             </div>
             <div className="our-classes">
